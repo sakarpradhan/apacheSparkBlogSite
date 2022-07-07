@@ -30,7 +30,9 @@ class QueryBuilder
 			$statement->execute($data);
 		} catch (Exception $e) {
 			die($e->getMessage());
-		} 
+		}
+		
+		return true;
 	}
 
 	public function findBy($table, $column, $value)

@@ -9,11 +9,14 @@ class SessionController
 	// shows user login page
 	public function create()
 	{
-		// if (!empty($_SESSION) && $_SESSION['login_status'] != 1)
-		// {
+		if ( !isUserLogged() )
+		{
 			return view('session_create');
-		// }
-		header('Location: /');
+		}
+		else
+		{
+			header('Location: /');
+		}
 	}
 
 	// logs the user and stores info into session
@@ -38,8 +41,11 @@ class SessionController
 	// logs the user out
 	public function destroy()
 	{
-		unset($_SESSION['user']);
-		unset($_SESSION['login_status']);
+		if ( isUserLogged() )
+		{
+			unset($_SESSION['user']);
+			unset($_SESSION['login_status']);
+		}
 		header('Location: /login');
 	}
 }

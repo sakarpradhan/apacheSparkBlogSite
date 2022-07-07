@@ -27,13 +27,16 @@ Class RegisterController
 		$email		= $_POST['email'];
 		$password	= $_POST['password'];
 
-		App::get('database')->insert('users', [
+		$status = App::get('database')->insert('users', [
 			'name'		=>	$_POST['name'],
 			'email'		=>	$_POST['email'],
 			'password'	=>	password_hash($_POST['password'], PASSWORD_BCRYPT)
 		]);
 
-		header('Location: /login');
+		if ($status) {
+			$_SESSION['message'] = 'User created successfully. Please login with your credentials.';
+			header('Location: /login');
+		}
 	}
 
 	// validation logic for form data here

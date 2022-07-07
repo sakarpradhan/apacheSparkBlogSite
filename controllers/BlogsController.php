@@ -26,7 +26,15 @@ class BlogsController
 	// shows editor to post new blog
 	public function create()
 	{
-		
+		if ( isUserLogged() )
+		{
+			return view('blog_create');
+		}
+		else
+		{
+			$_SESSION['message'] = 'Please login to create a blog';
+			header('Location: /login');
+		}
 	}
 
 	public function delete()

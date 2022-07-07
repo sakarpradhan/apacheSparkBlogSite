@@ -2,6 +2,8 @@
 
 $router->get('', 'BlogsController@homepage');
 $router->get('blog', 'BlogsController@index');
+$router->get('blog/create', 'BlogsController@create');
+
 
 $router->get('contact', 'ContactsController@index');
 $router->post('contact', 'ContactsController@store');

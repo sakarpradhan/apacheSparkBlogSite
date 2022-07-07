@@ -17,3 +17,15 @@ function view($name, $data = [])
 	extract($data);
 	return require "views/{$name}.view.php";
 }
+
+function isUserLogged()
+{
+	if( !empty($_SESSION['login_status']) && $_SESSION['login_status'] == true)
+	{
+		return true;
+	}
+	else 
+	{
+		return false;
+	}
+}
