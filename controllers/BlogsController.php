@@ -20,7 +20,7 @@ class BlogsController
 	// shows all blogposts
 	public function index()
 	{
-		return 'Blog Page';
+		return view('blog_index');
 	}
 
 	// shows editor to post new blog

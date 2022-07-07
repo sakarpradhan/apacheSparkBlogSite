@@ -27,31 +27,16 @@ Class RegisterController
 		$email		= $_POST['email'];
 		$password	= $_POST['password'];
 
-		// if ( !count($name) < 8 && !count($email) < 10 && !count($password) < 8 )
-		// {
-		// 	if ( filter_var($email, FILTER_VALIDATE_EMAIL) )
-		// 	{
-				
-		// 	}
-		// 	else
-		// 	{
-		// 		die('Invalid email address.');
-		// 	}
-		// }
-		// else
-		// {
-		// 	die('Invalid credentials.');
-		// }
-
 		App::get('database')->insert('users', [
 			'name'		=>	$_POST['name'],
 			'email'		=>	$_POST['email'],
 			'password'	=>	password_hash($_POST['password'], PASSWORD_BCRYPT)
 		]);
 
-		
+		header('Location: /login');
 	}
 
+	// validation logic for form data here
 	public static function validate($input)
 	{
 		if ( !empty($input['name']) && !empty($input['name']) && !empty($input['name']) )

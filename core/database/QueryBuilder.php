@@ -32,4 +32,16 @@ class QueryBuilder
 			die($e->getMessage());
 		} 
 	}
+
+	public function findBy($table, $column, $value)
+	{
+		// $sql = sprintf(
+		// 	"SELECT * FROM %s WHERE %s = '%s'",
+		// 	$table,
+		// );
+		$statement = $this->pdo->prepare(
+			"SELECT * FROM {$table} WHERE {$column} = '{$value}'");
+		$statement->execute();
+		return $statement->fetchObject();
+	}
 }

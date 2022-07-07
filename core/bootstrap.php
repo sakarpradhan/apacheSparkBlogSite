@@ -2,6 +2,8 @@
 
 use App\Core\App;
 
+session_start();
+
 App::bind('config', require 'config.php');
 
 App::bind('database', new QueryBuilder(
