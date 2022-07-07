@@ -30,7 +30,6 @@ CREATE TABLE `apache_spark`.`blogs`
 		`slug` VARCHAR(128) UNIQUE,
 		`author_id` INT,
 		`title` VARCHAR(128) NOT NULL,
-		`excerpt` VARCHAR(128),
 		`content` TEXT NOT NULL,
 		`created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
 		`updated_at` DATETIME on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,

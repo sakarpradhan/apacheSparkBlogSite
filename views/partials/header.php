@@ -9,9 +9,12 @@
 	<script>
       tinymce.init({
         selector: '#content',
-		plugins: 'link image autoresize wordcount',
-		toolbar: 'undo redo | styles | bold italic | link image',
-		menubar: 'false'
+		plugins: 'lists link image autoresize wordcount quickbars',
+		toolbar: 'undo redo | styles | bold italic underline| indent outdent | numlist bullist | link image',
+		menubar: 'false',
+		content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }',
+		quickbars_selection_toolbar: 'bold italic underline | blocks | bullist numlist | quicklink',
+		quickbars_insert_toolbar: false
       });
     </script>
 </head>

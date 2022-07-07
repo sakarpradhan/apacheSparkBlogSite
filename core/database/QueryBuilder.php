@@ -37,12 +37,16 @@ class QueryBuilder
 
 	public function findBy($table, $column, $value)
 	{
-		// $sql = sprintf(
-		// 	"SELECT * FROM %s WHERE %s = '%s'",
-		// 	$table,
-		// );
 		$statement = $this->pdo->prepare(
 			"SELECT * FROM {$table} WHERE {$column} = '{$value}'");
+		$statement->execute();
+		return $statement->fetchObject();
+	}
+
+	public function findById($table, $value)
+	{
+		$statement = $this->pdo->prepare(
+			"SELECT * FROM {$table} WHERE `id` = '{$value}'");
 		$statement->execute();
 		return $statement->fetchObject();
 	}
