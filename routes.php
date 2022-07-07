@@ -3,7 +3,7 @@
 $router->get('', 'BlogsController@homepage');
 $router->get('blog', 'BlogsController@index');
 $router->get('blog/create', 'BlogsController@create');
-
+$router->post('blog/create', 'BlogsController@store');
 
 $router->get('contact', 'ContactsController@index');
 $router->post('contact', 'ContactsController@store');

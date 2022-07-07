@@ -3,5 +3,8 @@
 		"classmap": [
 			"./"
 		]
+	},
+	"require": {
+		"tinymce/tinymce": "^6.1"
 	}
 }

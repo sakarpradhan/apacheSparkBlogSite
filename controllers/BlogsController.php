@@ -37,6 +37,12 @@ class BlogsController
 		}
 	}
 
+	// save the blog to the database
+	public function store()
+	{
+		
+	}
+
 	public function delete()
 	{
 		
