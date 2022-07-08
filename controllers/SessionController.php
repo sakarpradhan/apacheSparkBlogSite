@@ -22,7 +22,7 @@ class SessionController
 	// logs the user and stores info into session
 	public function store()
 	{
-		$user = App::get('database')->findBy('users', 'email', $_POST['email']);
+		$user = App::get('database')->findFirstBy('users', 'email', $_POST['email']);
 		$password_verify = password_verify($_POST['password'], $user->password);
 		if ($password_verify)
 		{

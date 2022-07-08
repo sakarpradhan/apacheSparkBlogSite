@@ -35,12 +35,20 @@ class QueryBuilder
 		return true;
 	}
 
-	public function findBy($table, $column, $value)
+	public function findFirstBy($table, $column, $value)
 	{
 		$statement = $this->pdo->prepare(
 			"SELECT * FROM {$table} WHERE {$column} = '{$value}'");
 		$statement->execute();
 		return $statement->fetchObject();
+	}
+
+	public function findAllBy($table, $column, $value)
+	{
+		$statement = $this->pdo->prepare(
+			"SELECT * FROM {$table} WHERE {$column} = '{$value}'");
+		$statement->execute();
+		return $statement->fetchAll(PDO::FETCH_CLASS);
 	}
 
 	public function findById($table, $value)
