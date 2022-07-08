@@ -70,4 +70,12 @@ class QueryBuilder
 		$statement->execute();
 		return $statement->fetchColumn();
 	}
+
+	public function updateColumn($table, $setColumn, $setValue, $whereColumn, $whereValue)
+	{
+		$statement = $this->pdo->prepare(
+			"UPDATE `{$table}` SET `{$setColumn}` = '{$setValue}' WHERE `{$whereColumn}` = '{$whereValue}'"
+		);
+		return $statement->execute();
+	}
 }

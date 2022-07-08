@@ -27,10 +27,10 @@ DROP TABLE IF EXISTS `apache_spark`.`blogs`;
 CREATE TABLE `apache_spark`.`blogs`
 	(
 		`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-		`slug` VARCHAR(128) UNIQUE,
 		`author_id` INT,
 		`title` VARCHAR(128) NOT NULL,
 		`content` TEXT NOT NULL,
+		`featured` BOOLEAN DEFAULT '0' NOT NULL,
 		`created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
 		`updated_at` DATETIME on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 		FOREIGN KEY (`author_id`) REFERENCES `apache_spark`.`users`(`id`)

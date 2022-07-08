@@ -29,3 +29,15 @@ function isUserLogged()
 		return false;
 	}
 }
+
+function isAdmin()
+{
+	if( !empty($_SESSION['is_admin']) && $_SESSION['is_admin'] == true)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}

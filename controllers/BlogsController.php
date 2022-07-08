@@ -9,13 +9,22 @@ class BlogsController
 {
 	public function homepage()
 	{
-		// $result = App::get('database')->selectAll('tasks');
-
-		// return view('index', [
-			// 	'result' => $result
-		// ]);
+		$blogs = App::get('database')->findAllBy('blogs', 'featured', 1);
 		
-		return view('index');
+		array_map(function($blog)
+		{
+			// find author name and replace id with name
+			$author = App::get('database')->findById('users', $blog->author_id);
+			$blog->author_id = $author->name;
+
+			//find comment count and append to array
+			$commentCount = App::get('database')->getCountBy('comments', 'blog_id', $blog->id);
+			$blog->commentCount = $commentCount;
+		}, $blogs);
+
+		return view('index', [
+			'blogs'	=>	$blogs
+		]);
 	}
 
 	// shows all blogposts
@@ -98,6 +107,18 @@ class BlogsController
 		]);
 
 		return header('Location: /blog');
+	}
+
+	// feature or unfeature a blog
+	public function feature()
+	{
+		if (isAdmin())
+		{
+			$blog = App::get('database')->findById('blogs', $_GET['blog_id']);
+			$setValue = ($blog->featured == 1) ? 0 : 1;
+			App::get('database')->updateColumn('blogs', 'featured', $setValue, 'id', $blog->id);
+			header("Location: {$_SERVER['HTTP_REFERER']}");
+		}
 	}
 
 	public function delete()

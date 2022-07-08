@@ -28,6 +28,7 @@ class SessionController
 		{
 			$_SESSION['user'] = $user;
 			$_SESSION['login_status'] = true;
+			$_SESSION['is_admin'] = ($user->admin == 1) ? true : false;
 			header('Location: /blog');
 		}
 		else
@@ -45,6 +46,7 @@ class SessionController
 		{
 			unset($_SESSION['user']);
 			unset($_SESSION['login_status']);
+			unset($_SESSION['is_admin']);
 		}
 		header('Location: /login');
 	}
