@@ -8,7 +8,7 @@ foreach ($blogs as $blog)
 ?>
 	<div>
 	<h3><?= $blog->title ?></h3>
-	<div>Author: <?= $blog->author_id ?> | Created at: <?= $blog->created_at ?></div>
+	<div>Author: <?= $blog->author_id ?> | Created at: <?= $blog->created_at ?> | Comments: <?= $blog->commentCount ?></div>
 	<p>
 		<?php
 		echo substr(strip_tags($blog->content), 0, 300);		

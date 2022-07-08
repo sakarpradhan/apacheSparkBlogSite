@@ -22,18 +22,22 @@ class BlogsController
 	public function index()
 	{
 		$blogs = App::get('database')->selectAll('blogs');
-		
+
 		if ( $blogs )
 		{
 			array_map(function($blog)
 			{
+				// find author name and replace id with name
 				$author = App::get('database')->findById('users', $blog->author_id);
 				$blog->author_id = $author->name;
+
+				//find comment count and append to array
+				$commentCount = App::get('database')->getCountBy('comments', 'blog_id', $blog->id);
+				$blog->commentCount = $commentCount;
 			}, $blogs);
-	
+
 			return view('blog_index', [
 				'blogs'		=>	$blogs,
-				'author'	=>	'Ram'
 			]);
 		}
 		else

@@ -38,7 +38,8 @@ class QueryBuilder
 	public function findFirstBy($table, $column, $value)
 	{
 		$statement = $this->pdo->prepare(
-			"SELECT * FROM {$table} WHERE {$column} = '{$value}'");
+			"SELECT * FROM {$table} WHERE {$column} = '{$value}'"
+		);
 		$statement->execute();
 		return $statement->fetchObject();
 	}
@@ -46,7 +47,8 @@ class QueryBuilder
 	public function findAllBy($table, $column, $value)
 	{
 		$statement = $this->pdo->prepare(
-			"SELECT * FROM {$table} WHERE {$column} = '{$value}'");
+			"SELECT * FROM {$table} WHERE {$column} = '{$value}'"
+		);
 		$statement->execute();
 		return $statement->fetchAll(PDO::FETCH_CLASS);
 	}
@@ -54,8 +56,18 @@ class QueryBuilder
 	public function findById($table, $value)
 	{
 		$statement = $this->pdo->prepare(
-			"SELECT * FROM {$table} WHERE `id` = '{$value}'");
+			"SELECT * FROM {$table} WHERE `id` = '{$value}'"
+		);
 		$statement->execute();
 		return $statement->fetchObject();
+	}
+
+	public function getCountBy($table, $column, $value)
+	{
+		$statement = $this->pdo->prepare(
+			"SELECT COUNT(*) FROM `{$table}` WHERE {$column} = '{$value}'"
+		);
+		$statement->execute();
+		return $statement->fetchColumn();
 	}
 }
