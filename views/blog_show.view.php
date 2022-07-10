@@ -29,6 +29,7 @@ if ( isAdmin() )
 	<?= $blog->content; ?>
 </p>
 
+
 <?php include('partials/comment.php'); ?>
 
 <?php include('partials/footer.php'); ?>
