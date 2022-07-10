@@ -51,7 +51,9 @@ class BlogsController
 		}
 		else
 		{
-			throw new Exception('No blogs entries yet.');
+			return view('blog_index', [
+				'blogs'		=>	$blogs,
+			]);
 		}
 	}
 
