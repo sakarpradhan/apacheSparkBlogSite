@@ -15,7 +15,7 @@
 	</ul>
 </form> -->
 
-
+<form action="/contact" method="POST">
 <div class="bg-gradient-to-b from-purple-600 to-indigo-700 h-96 w-full">
             <div class="md:px-20 px-4 py-8">
                 <div class="flex items-center justify-between">
@@ -58,6 +58,7 @@
                 </div>
             </div>
         </div>
+</form>
         
         
     
