@@ -24,4 +24,3 @@ $router->post('register', 'RegisterController@store');
 $router->get('login', 'SessionController@create');
 $router->post('login', 'SessionController@store');
 $router->get('logout', 'SessionController@destroy');
-

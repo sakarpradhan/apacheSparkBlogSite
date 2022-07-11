@@ -5,6 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Apache Spark</title>
+	<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+	<script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
 	<script src="\vendor\tinymce\tinymce\tinymce.min.js" referrerpolicy="origin"></script>
 	<script>
       tinymce.init(
