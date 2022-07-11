@@ -1,8 +1,6 @@
 <?php include('partials/header.php') ?>
 <html>
 	<head>
-
-	<h1>Apache Spark</h1>
 </head>
 <body>
 	<div class = "container">
@@ -15,9 +13,10 @@ if ( !empty($blogs) )
 	foreach ($blogs as $blog)
 	{
 	?>
-		<div>
+		<div class="main-title">
 		<h3> <?= $blog->title ?> </h3>
-		<div>
+	</div>
+		<div class="blog-title">
 		
 			Author: <?= $blog->author_id ?> | Created at: <?= $blog->created_at ?> | 
 			<a href="/blog/show?blog_id=<?= $blog->id ?>" title="Click to see all comments">
@@ -25,12 +24,20 @@ if ( !empty($blogs) )
 			</a>
 			
 		</div>
-	
+		
+		
 	</br>
+	<div class="blog">
 		<p>
 			<?= $blog->content ?>
 		</p>
+	</div>
+	
 		</div>
+		</br>
+		</br>
+		</br>
+	</br>
 	<?php
 	}	
 } else {
@@ -49,7 +56,7 @@ if ( !empty($blogs) )
 </div>
 </body>
 <style type ="text/css">
-    body{
+    .blog{
 		display: flex;
 		font-family: 'Amatic SC', cursive;
 			font-size: 18px;
@@ -57,7 +64,29 @@ if ( !empty($blogs) )
 			flex-wrap: wrap;
 			width: 1300px;
 			text-align: justify;
+			height: 144px;
     }
+	.main-title{
+		display: flex;
+		font-family: 'Roboto Slab', serif;
+			font-size: 37px;
+			margin: auto;
+			flex-wrap: wrap;
+			width: 1300px;
+			text-align: center;
+			
+    }
+	.blog-title{
+		display: flex;
+		font-family: 'Raleway', sans-serif;
+			font-size: 15px;
+			margin: auto;
+			flex-wrap: wrap;
+			width: 1300px;
+			text-align: justify;
+			
+    }
+	
 	html{
 			scroll-behavior: smooth;
 		}

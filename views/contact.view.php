@@ -24,7 +24,7 @@
                 
             </div>
             <div class="w-full flex items-center justify-center my-12">
-                <div class="absolute top-60 bg-white dark:bg-gray-800 shadow rounded py-12 lg:px-28 px-8">
+                <div class="relative top-2 bg-white dark:bg-gray-800 shadow rounded py-12 lg:px-28 px-8">
                     <p class="md:text-4xl text-xl font-bold leading-7 text-center text-gray-700 dark:text-white">Contact US</p>
 </br>
 					<p class="md:text-l text-l font-normal leading-5 text-center text-gray-200 dark:text-white">Leave your details and we will get back to you soon</p>
@@ -61,11 +61,11 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD
 </form>
 =======
         </form>
->>>>>>> 14e5945dc06d5a0c642a299c8505ccc86f4054be
+>>>>>>> 14e5945dc06d5a0c642a299c8505ccc86f4054be -->
         
         
     

@@ -15,8 +15,10 @@ if ( isUserLogged() )
 		
 		</div>
                      <!-- Code block for primary button starts -->
+					 <div class="btn">
 					 <button type="submit" class="mx-2 my-2 bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-8 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600">Post Comment</button>
-                    <!-- Code block for primary button ends -->
+</div>
+					 <!-- Code block for primary button ends -->
          </div>
 		<!-- <button type="submit">Post Comment</button> -->
 	</form>
@@ -70,6 +72,15 @@ else
 			width: 290px;
 			text-align: justify;
     }
+	/* .btn{
+		display: flex;
+		font-family: 'Roboto Slab', serif;
+			font-size: 87px;
+			margin: auto;
+			flex-wrap: wrap;
+			width: 1300px;
+			text-align: center;
+    } */
 	html{
 			scroll-behavior: smooth;
 		}

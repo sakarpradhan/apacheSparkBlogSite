@@ -1,24 +1,9 @@
 <?php include('partials/header.php'); ?>
+<div class="main-title">
+		<h3> <?= $blog->title ?> </h3>
+	</div>
 
-<h2>
-  <?= $blog->title ?>
-  <style type ="text/css">
-    *{
-      margin: 0;
-      padding: 0;
-    }
-    body{
-      /* background: #C70039; */
-    }
-    .container{
-      position: absoulte;
-      left: 50%;
-      top: 50%;
-
-    }
-    </style>
-</h2>
-
+<div class = "blog-title">
 <div>Author: <?= $blog->author_id ?> | Created at: <?= $blog->created_at ?>
 	<?php
 		if( $blog->featured == 1 )
@@ -27,6 +12,7 @@
 		}
 	?>
 </div>
+  </div>
 
 <?php
 if ( isAdmin() )
@@ -40,9 +26,11 @@ if ( isAdmin() )
     </div>
     
                      <!-- Code block for primary button starts -->
+                     <div class="btn">
 					 <button type="submit" class="mx-2 my-2 bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-8 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600"><?php
 			echo ($blog->featured == 0) ? "Feature" : "Unfeature";
 		?></button>
+    </btn>
                     <!-- Code block for primary button ends -->
          </div>
 		</a>
@@ -51,11 +39,66 @@ if ( isAdmin() )
 }
 ?>
 
+<div class="blog">
+		<p>
+			<?= $blog->content ?>
+		</p>
+	</div>
 
-<p>
-	<?= $blog->content; ?>
-</p>
+  
+<style type ="text/css">
+    .blog{
+      display: flex;
+      flex-wrap: wrap;
+		font-family: 'Amatic SC', cursive;
+    font-size: 18px;
+			text-align: justify;
+			width: 1300px;
+      margin: auto;
+    }
+	.main-title{
+		display: flex;
+		font-family: 'Roboto Slab', serif;
+			font-size: 37px;
+			margin: auto;
+			flex-wrap: wrap;
+			width: 1300px;
+			text-align: center;
+			
+    }
+	.blog-title{
+		display: flex;
+		font-family: 'Raleway', sans-serif;
+			font-size: 15px;
+			margin: auto;
+			flex-wrap: wrap;
+			width: 1300px;
+			text-align: justify;
+			
+    }
+    .btn{
+		display: flex;
+			margin: auto;
+			flex-wrap: wrap;
+			width: 1300px;
+			
+			
+    }
+    /* .footer{
+      display: flex;
+		font-family: 'Raleway', sans-serif;
+			font-size: 15px;
+			margin: auto;
+			flex-wrap: wrap;
+			width: 1300px;
+			text-align: justify;
+    } */
+	
+	html{
+			scroll-behavior: smooth;
+		}
+    </style>
 
-<?php include('partials/comment.php'); ?>
-
-<?php include('partials/footer.php'); ?>
+<div class="footer">
+<?php include('partials/comment.php') ?>
+  </div>
