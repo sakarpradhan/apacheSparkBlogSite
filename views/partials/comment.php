@@ -38,7 +38,7 @@ else
 <style type ="text/css">
 	.login-to-share{
 		display: flex;
-		font-family: 'Amatic SC', cursive;
+		font-family: 'Montserrat', sans-serif;
 			font-size: 22px;
 			margin: auto;
 			flex-wrap: wrap;
@@ -47,7 +47,7 @@ else
 	}
 	.comment-write{
 		display: flex;
-		font-family: 'Amatic SC', cursive;
+		font-family: 'Montserrat', sans-serif;
 			font-size: 22px;
 			margin: auto;
 			flex-wrap: wrap;
@@ -56,7 +56,7 @@ else
 	}
     .comment{
 		display: flex;
-		font-family: 'Amatic SC', cursive;
+		font-family: 'Montserrat', sans-serif;
 			font-size: 18px;
 			margin: auto;
 			flex-wrap: wrap;

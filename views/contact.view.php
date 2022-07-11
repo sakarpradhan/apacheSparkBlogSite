@@ -1,9 +1,9 @@
 <?php include('partials/header.php'); ?>
 
 <!-- <h1>Contact Us</h1>
-<h3>Leave your details and we will get back to you</h3>
+<h3>Leave your details and we will get back to you</h3> -->
 
-<form action="/contact" method="POST">
+<!-- <form action="/contact" method="POST">
 	<ul>
 		<label name="lblName">Name:</label>
 		<input type="text" name="name">
@@ -33,14 +33,14 @@
 					<div class="md:flex items-center mt-12">
                         <div class="md:w-72 flex flex-col">
                             <label class="text-base font-semibold leading-none text-gray-800 dark:text-white">Name</label>
-                            <input type="name" tabindex="0" arial-label="Please input you full name" type="name" class=" text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-1000 border rounded border-gray-500 placeholder-gray-400 resize-none" placeholder="Please input your full name" />
+                            <input type="name" name="name" tabindex="0" arial-label="Please input you full name" type="name" class=" text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-1000 border rounded border-gray-500 placeholder-gray-400 resize-none" placeholder="Please input your full name" />
                         </div>
                         
                     </div>
                     <div class="md:flex items-center mt-12">
 					<div class="md:w-72 flex flex-col">
                             <label name="lblName" class="text-base font-semibold leading-none text-gray-800 dark:text-white">Email Address</label>
-                            <input type="email" tabindex="0" arial-label="Please input email address" type="name" class=" text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-400 resize-none" placeholder="Please input your email address" />
+                            <input type="email" name="email" tabindex="0" arial-label="Please input email address" type="name" class=" text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-400 resize-none" placeholder="Please input your email address" />
                         </div>
                         
                         

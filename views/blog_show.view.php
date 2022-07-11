@@ -48,9 +48,10 @@ if ( isAdmin() )
   
 <style type ="text/css">
     .blog{
+      line-height: 2.5rem;
       display: flex;
       flex-wrap: wrap;
-		font-family: 'Amatic SC', cursive;
+      font-family: 'Montserrat', sans-serif;
     font-size: 18px;
 			text-align: justify;
 			width: 1300px;

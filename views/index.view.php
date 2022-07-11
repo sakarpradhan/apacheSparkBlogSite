@@ -58,8 +58,8 @@ if ( !empty($blogs) )
 <style type ="text/css">
     .blog{
 		display: flex;
-		font-family: 'Amatic SC', cursive;
-			font-size: 18px;
+		font-family: 'Montserrat', sans-serif;
+			font-size: 20px;
 			margin: auto;
 			flex-wrap: wrap;
 			width: 1300px;
