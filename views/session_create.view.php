@@ -1,7 +1,7 @@
 <?php include('partials/header.php') ?>
 
-<h1>User Sign in</h1>
-<h3>Enter your credentials</h3>
+<!-- <h1>User Sign in</h1>
+<h3>Enter your credentials</h3> -->
 
 <!-- <form action="login" method="POST">
 	Email: <input name="email" type="email"><br><br>
