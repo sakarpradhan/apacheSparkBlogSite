@@ -40,7 +40,7 @@ if ( !empty($blogs) )
                     <div class="lg:w-1/2">
                         <img tabindex="0" role="img" aria-label="Apche Spark" src="https://prod-discovery.edx-cdn.org/media/course/image/6b2559aa-c997-46df-9041-05aca4affb81-f4e2f1f1019f.small.png" class="focus:outline-none w-full" alt="Beautiful italy street" />
                         <div class="mt-8 lg:mb-0 mb-8">
-                            <h2 tabindex="0" class="focus:outline-none dark:text-black f-m-m text-2xl font-semibold leading-7">Apache Spark</h1>
+                            <h2 tabindex="0" class="focus:outline-none dark:text-black f-m-m text-2xl font-semibold leading-7">Apache Sparks</h1>
                             <p tabindex="0" class="focus:outline-none dark:text-black text-base f-m-m leading-loose mt-2"><?php
 if ( !empty($blogs) )
 {
